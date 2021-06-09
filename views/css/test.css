@@ -1,0 +1,193 @@
+*{   /* UTILIZO PARA RESTABLECER TODO Y PINTAR DE NUEVO*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/***********tabla de usuarios tabla permisos  css***************/
+.encabezadoTablaUsuarios{
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  background: #dd4b39 !important;
+  color: white !important;
+}
+
+.encabezadoNumero{
+  width: 10% !important;
+  border: 1px solid rgb(245, 223, 223);
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 3px 5px !important;
+}
+
+.encabezadoNombre{
+  width:  45% !important;
+  border: 1px solid rgb(245, 223, 223);
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 3px 5px !important;
+}
+.encabezadoPuesto{
+  width:  35% !important;
+  border: 1px solid rgb(245, 223, 223);
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 3px 5px !important;
+}
+.encabezadoPermisos{
+  width: 10% !important;
+  border: 1px solid rgb(245, 223, 223);
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 3px 5px !important;
+
+}
+/******************* tabla de permisos  css *********************/
+.encabezadoTablaPermisos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background:rgb(50, 104, 206);
+  color: white;
+}
+
+.encabezadoPermisoNumero{
+  width: 15%;
+  border: 1px solid rgb(245, 223, 223);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 5px;
+  
+}
+
+.encabezadoPermisoNombre{
+  width:  70%;
+  border: 1px solid rgb(245, 223, 223);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 5px;
+}
+.encabezadoPermisosEliminar{
+  width:  15%;
+  border: 1px solid rgb(245, 223, 223);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 5px;
+
+}
+
+/*********** Botones funcionamiento checkbox ***********/
+.ButtonEscritura[type="checkbox"]
+{
+  margin-left: 20%;
+  margin-right: 15%;
+  width: 40%;
+  height: 12.7px;/*15*/
+  background: rgb(129, 126, 126);
+  -webkit-appearance: none;
+  border-radius: 20px;
+  outline: none !important;
+  transition: .4s;
+  
+  cursor: pointer; 
+  
+}
+
+.ButtonEscritura:checked[type="checkbox"]
+{
+  background-color: rgb(226, 145, 156)
+  
+}
+
+.ButtonEscritura[type="checkbox"]::before
+{
+  position: absolute;
+  content: "";
+  margin-left: 6%;
+  left: 20%;
+  width: 22%;
+  height: 90%;
+  background-color: rgb(197, 193, 193);
+  border-radius: 70%;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .4s;
+  bottom:  17.5%;  
+}
+
+.ButtonEscritura:checked[type="checkbox"]::before
+{
+  left: 52%;
+  background-color: rgb(255, 0, 21);
+}
+
+.toggle
+{
+  position: relative;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+.onbtn
+{
+  bottom:  27%;
+  left: 25%;   
+}
+.ofbtn{
+  bottom: 27%;
+  right: 30%;
+  
+}
+#LecturaEscritura{
+  width: 13%;
+}
+/*****************Estructura de tabla permisos*******************/
+label
+{
+  position: absolute;
+  color: rgb(0, 0, 0);
+  font-weight: 10;
+  font-size: 110%;
+  pointer-events: none;
+}
+
+tr:nth-child(odd){
+  background: #def0f7;
+}
+.titulo
+{
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 2em;
+  font-family: "Courier New";
+  color: rgb(50, 104, 206);
+}
+.Encabezado
+{
+  background:#2196F3;
+  margin-left:2px;
+  margin-right:2px;
+  padding-bottom:5px;
+  color:rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+/****************************************************************/
+
+
+

@@ -1,0 +1,57 @@
+#Impedir que se pueda ver el listado de contenidos de un directorio
+Options All -Indexes
+
+order allow,deny
+#deny from 192.168.0.1
+#deny from 192.168.0.115
+#deny from 192.168.0.211
+allow from all
+
+ErrorDocument 500 /asesores/views/modules/errores/500.php
+ErrorDocument 401 /asesores/views/modules/errores/401.php
+ErrorDocument 403 /asesores/views/modules/errores/403.php
+ErrorDocument 404 /asesores/views/modules/errores/404.php
+
+php_value upload_max_filesize 5000M
+php_value post_max_size 5010M
+php_value max_execution_time 300
+php_value set_time_limit 300
+php_value max_input_time 300
+php_value max_file_uploads 500
+php_value memory_limit 5000M
+
+#URLS AMIGABLES
+# Activar RewriteEngine
+
+RewriteEngine on
+RewriteRule ^([0-9a-zA-Z-/]+)$ index.php?action=$1
+
+#No almacenar imagen en cache
+#para linux habilitar mod_header: 
+#a2enmod headers
+#apache2 -k graceful
+#sudo systemctl restart apache2
+
+<FilesMatch "\.(?i:jpg|jpeg|png)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache"
+  </IfModule>
+</FilesMatch>
+
+#correcto Linux
+#<IfModule mod_expires.c>
+ #ExpiresActive on
+ #ExpiresByType text/css                  "access plus 0 seconds"
+ #ExpiresByType application/javascript    "access plus 0 seconds"
+#</IfModule>
+
+#Windows
+#<FilesMatch "\.(?i:jpg|jpeg|png)$">
+#  FileETag None
+#  <IfModule mod_headers.c>
+#     Header unset ETag
+#     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+#     Header set Pragma "no-cache"
+#     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+#  </IfModule>
+#</FilesMatch>

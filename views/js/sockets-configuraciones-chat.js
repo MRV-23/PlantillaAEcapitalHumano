@@ -1,0 +1,1 @@
+let socketChat = io('http://'+window.location.host+':49001');
